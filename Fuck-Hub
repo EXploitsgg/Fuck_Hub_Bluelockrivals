@@ -1,0 +1,30 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Fuck Hub - Blue Lock Rivals", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "🏠 | Home",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Inf stamina"
+})
+
+Tab:AddParagraph("Info","More content will be added in the future")
+
+Tab:AddButton({
+	Name = "Inf Stamina",
+	Callback = function()
+      		local args = {
+    [1] = 0/0
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("StaminaService"):WaitForChild("RE"):WaitForChild("DecreaseStamina"):FireServer(unpack(args))
+  	end    
+})
+
+
+
+OrionLib:Init()
