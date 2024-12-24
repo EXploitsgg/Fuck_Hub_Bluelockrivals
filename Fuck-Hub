@@ -25,6 +25,20 @@ game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Inf Jump"
+})
 
+Tab:AddButton({
+	Name = "Inf Jump",
+	Callback = function()
+      		local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
+  	end    
+})
 
 OrionLib:Init()
